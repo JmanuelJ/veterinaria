@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+<body style="margin: 0;">
+
+<!-- Navigation -->
+
+<ul>
+  <li ><a href="Pricipal.html">Veterinaria</a></li>
+  <li><a href="#tour">Galeria</a></li>
+  <li><a href="Contacto.html">Contacto</a></li>
+
+  <li style="float:right"><a class="active1" href="Tipo.html"><b>Registrarse</b></a></li>
+  <li style="float:right"><a class="active2" href="LOgin.html"><b>Ingresar</b></a></li>
+</ul>
+
+<div class="row margen" align="center">
+<!-- Descripcion -->
+      <header>
+        <h2>VETERINARIO</h2>
+      </header>
+      <div class="row formularios">
+        <form action="Datos_veterinario.php" ; method="post">
+          <fieldset>
+            <legend>Ingresa los datos que se te solicitan para crear tu cuenta</legend>
+            <p>
+              <label for ="nombre">Nombre</label>
+              <input type = "text" name ="nombre" id="nombre"/>
+            </p>
+            <p>
+              <label for ="telefono">Numero Telefonico</label>
+              <input type ="number" name ="telefono" id="telefono"/>
+            </p>
+            <p>
+                <label for ="cedula">Numero de Cedula profesional</label>
+                <input type ="number" name ="cedula" id="cedula"/>
+            </p>
+            <p>
+              <label for ="correo">Correo electronico</label>
+              <input type ="text" name ="correo" id="correo"/>
+            </p>
+            <p>
+              <label for ="contraseña">Contraseña</label>
+              <input type = "text" name ="contraseña" id="contraseña"/>
+            </p>
+            <p class ="centrado">
+              <input type ="submit" value ="Crear cuenta" id="boton-crear"/>
+            </p>
+          </fieldset>
+        </form>
+
+      </div>
+
+
+
+
+      </div>
+
+
+</div>
+
+<!--footer-->
+<div class="row color">
+    <a href="#"><i></i></a>
+    <p>
+    Follow Me
+    </p>
+</div>
+
+
+</body>
+</html>

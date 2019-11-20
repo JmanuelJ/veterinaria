@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+<body style="margin: 0;">
+
+<!-- Navigation -->
+
+<ul>
+  <li ><a href="Pricipal.html">Veterinaria</a></li>
+  <li><a href="#tour">Galeria</a></li>
+  <li><a href="Contacto.html">Contacto</a></li>
+
+  <li style="float:right"><a class="active1" href="Tipo.html"><b>Registrarse</b></a></li>
+  <li style="float:right"><a class="active2" href="LOgin.html"><b>Ingresar</b></a></li>
+</ul>
+
+<div class="row margen">
+<!-- Descripcion -->
+      <section class="car">
+          <img class="mySlides2" src="imagenes/cat.jpg">
+          <img class="mySlides2" src="imagenes/pet.jpg">
+          <img class="mySlides2" src="imagenes/gog.jpg">
+      </section>
+
+      <section class="centro" >
+          <h2 class="w3-wide">Telefonos</h2>
+          <p class="w3-justify">2324676289 - 2227849037</p>
+          <h2 class="w3-wide">Correos</h2>
+          <p class="w3-justify">veterianaria@gmail.com</p>
+          <h2 class="w3-wide">Redes Sociales</h2>
+          <img class="w3-justify" src="logo.png" style="width:10%">
+      </section>
+
+</div>
+
+<!--footer-->
+<div class="row color">
+    <a href="#"><i></i></a>
+    <p>
+    Follow Me
+    </p>
+</div>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var bros = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    bros++;
+    if (bros > x.length) {bros = 1}
+    x[bros-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+function enviar(pagina){
+document.nombreDelFormulario.action = pagina;
+document.nombreDelFormulario.submit();
+}
+</script>
+
+</body>
+</html>
