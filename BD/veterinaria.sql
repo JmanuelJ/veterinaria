@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2019 a las 09:19:30
+-- Tiempo de generación: 22-11-2019 a las 08:31:38
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -88,15 +88,36 @@ CREATE TABLE `veterinario` (
   `nombre` varchar(30) NOT NULL,
   `telefono` int(10) NOT NULL,
   `correo` varchar(30) NOT NULL,
-  `pass` varchar(15) NOT NULL
+  `pass` varchar(15) NOT NULL,
+  `estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `veterinario`
 --
 
-INSERT INTO `veterinario` (`cedula`, `nombre`, `telefono`, `correo`, `pass`) VALUES
-(12345678, 'pedro', 2147483647, 'oscarsk69@gmail.com', '12345a');
+INSERT INTO `veterinario` (`cedula`, `nombre`, `telefono`, `correo`, `pass`, `estado`) VALUES
+(12345678, 'pedro', 2147483647, 'oscarsk69@gmail.com', '12345a', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `veterinarioadm`
+--
+
+CREATE TABLE `veterinarioadm` (
+  `id` int(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `veterinarioadm`
+--
+
+INSERT INTO `veterinarioadm` (`id`, `nombre`, `correo`, `pass`) VALUES
+(1, 'juan manuel', 'penta21zona15@gmail.com', 'penta');
 
 --
 -- Índices para tablas volcadas
@@ -128,6 +149,12 @@ ALTER TABLE `mascota`
 --
 ALTER TABLE `veterinario`
   ADD PRIMARY KEY (`cedula`);
+
+--
+-- Indices de la tabla `veterinarioadm`
+--
+ALTER TABLE `veterinarioadm`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas

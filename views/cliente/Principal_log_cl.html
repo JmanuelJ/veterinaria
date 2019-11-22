@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+<body style="margin: 0;">
+
+<!-- Navigation -->
+
+<ul>
+  <li ><a href="Pricipal_log_cl.html">Veterinaria</a></li>
+  <li><a href="#tour">Galeria</a></li>
+  <li><a href="Contacto_log_cl.html">Contacto</a></li>
+    
+  <li style="float:right"><a class="active2" href="../../Cierre.php"><b>Cerrar Sesión</b></a></li>
+</ul>
+
+<div class="row margen">
+<!-- Descripcion -->
+  <section>
+      <h2 class="centro">Servicio de Veterinaria</h2>
+      <p class="centro"><i>Tu centro de confianza</i></p>
+  </section>
+    
+    <!-- Slide Show -->
+  <section class="car">
+      <img class="mySlides" src="imagenes/dog.png" >
+      <img class="mySlides" src="imagenes/cat2.jpg">
+      <img class="mySlides" src="imagenes/4.jpg">
+  </section>
+
+</div>
+
+<!--footer-->
+<div class="row color">
+    <a href="#"><i></i></a>
+    <p>
+    Follow Me 
+    </p>
+</div>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var bros = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    bros++;
+    if (bros > x.length) {bros = 1}
+    x[bros-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+function enviar(pagina){
+document.nombreDelFormulario.action = pagina;
+document.nombreDelFormulario.submit();
+}
+</script>
+
+</body>
+</html>
