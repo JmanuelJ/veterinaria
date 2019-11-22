@@ -22,7 +22,7 @@
 	    echo "New cliente created successfully";
 		    session_start();
 		    $_SESSION["usuario"] = $usuario;
-			header("Location:Cliente.php");
+			header("Location: views/cliente/Cliente.php");
 	    } else {
 			echo "Error1: " . mysqli_error($conexion);
 	}

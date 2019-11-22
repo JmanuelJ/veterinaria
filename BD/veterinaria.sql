@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2019 a las 08:31:38
+-- Tiempo de generación: 23-11-2019 a las 00:44:37
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -30,11 +30,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cita` (
   `id` int(11) NOT NULL,
-  `tipo` varchar(30) NOT NULL,
+  `tipo` varchar(30) CHARACTER SET utf8 NOT NULL,
   `fecha` date NOT NULL,
   `numeroc` int(11) NOT NULL,
   `ced` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cita`
+--
+
+INSERT INTO `cita` (`id`, `tipo`, `fecha`, `numeroc`, `ced`) VALUES
+(0, 'Consulta', '2019-12-01', 1, 3),
+(63, 'Estetica', '2019-12-13', 2, 8);
 
 -- --------------------------------------------------------
 
@@ -164,7 +172,7 @@ ALTER TABLE `veterinarioadm`
 -- AUTO_INCREMENT de la tabla `cita`
 --
 ALTER TABLE `cita`
-  MODIFY `ced` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ced` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -181,13 +189,6 @@ ALTER TABLE `mascota`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `cita`
---
-ALTER TABLE `cita`
-  ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id`) REFERENCES `cliente` (`id`),
-  ADD CONSTRAINT `cita_ibfk_2` FOREIGN KEY (`ced`) REFERENCES `veterinario` (`cedula`);
 
 --
 -- Filtros para la tabla `mascota`

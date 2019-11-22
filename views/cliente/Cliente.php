@@ -29,6 +29,8 @@ echo "Bienvenido cliente";
 <div class="row margen" align="center">
   <h1>Hola Cliente</h2>
   <h1>Bienvenido a la pagina web de la veterinaria</h2>
+  <a href="Mascota.html">Mascota</a>
+  <a href="cita.html">Cita</a>
 
 
 </div>

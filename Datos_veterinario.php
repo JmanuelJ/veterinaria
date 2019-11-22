@@ -21,7 +21,7 @@
 		echo "New veterinario created successfully";
 		session_start();
         $_SESSION["usuario"] = $usuario;
-		header("Location:Veterinario.php");
+		header("Location: views/veterinario/Veterinario.php");
 	    } else {
 			echo "Error1: " . mysqli_error($conexion);
 	}		
